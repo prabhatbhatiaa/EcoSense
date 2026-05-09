@@ -86,6 +86,7 @@ ul {
     background: var(--text-muted);
 }
 
+/* --- THE UNIFIED ALIGNMENT WRAPPER --- */
 .container, .nav-container, .footer-container, .hero-container {
     max-width: 1440px; 
     margin: 0 auto; 
@@ -352,7 +353,7 @@ ul {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     width: 100%;
-    max-width: clamp(420px, 35vw, 580px);
+    max-width: clamp(320px, 35vw, 580px);
     box-shadow: var(--card-shadow);
     z-index: 2;
     overflow: hidden;
@@ -1123,8 +1124,12 @@ footer {
 
 @media (max-width: 992px) {
     /* SCALES THE NEW WRAPPER DOWN FOR TABLETS */
-    .container, .nav-container, .footer-container, .hero-container {
+    .container, .footer-container, .hero-container {
         padding: 0 2.5rem;
+    }
+    
+    .nav-container {
+        padding: 1rem 2.5rem;
     }
 
     .hero-container {
@@ -1140,6 +1145,15 @@ footer {
         justify-content: center;
     }
     
+    .hero-visual {
+        justify-content: center; /* Fixes left-pinning on tablets */
+        margin-top: 2rem;
+    }
+    
+    .mock-dashboard {
+        max-width: 480px; /* Lets the dashboard breathe naturally */
+    }
+
     .hero-overlay {
         display: none;
     }
@@ -1150,7 +1164,7 @@ footer {
     }
     
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
     
     .stats-container {
@@ -1160,12 +1174,22 @@ footer {
 
 @media (max-width: 768px) {
     /* SCALES THE NEW WRAPPER DOWN FOR PHONES */
-    .container, .nav-container, .footer-container, .hero-container {
+    .container, .footer-container, .hero-container {
         padding: 0 1.5rem;
+    }
+    
+    /* Safely separate the horizontal and vertical padding for the navbar */
+    .nav-container {
+        padding: 1rem 1.5rem;
     }
 
     #hero {
-        padding-top: 100px;
+        padding-top: 120px; /* Clear the navbar */
+    }
+
+    .hero-content h1 {
+        font-size: 3.25rem; /* Punch up the mobile typography */
+        line-height: 1.1;
     }
 
     .nav-links {
@@ -1189,10 +1213,6 @@ footer {
     
     .mobile-toggle {
         display: flex;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
     }
     
     .steps-container {
