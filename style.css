@@ -486,3 +486,130 @@ ul {
         transform: translateY(0px);
     }
 }
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.overview-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.overview-text p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.highlight-box {
+    background: var(--card-bg);
+    border-left: 4px solid var(--primary-green);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.highlight-box p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.highlight-box svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.overview-features {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature-item {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateX(10px);
+}
+
+.feature-item h4 {
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.feature-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.step-connector {
+    position: absolute;
+    top: 50px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: var(--border-color);
+    z-index: -1;
+}
+
+.step-card {
+    background: var(--card-bg);
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    position: relative;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.step-card:hover {
+    border-color: var(--primary-green);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(45, 106, 79, 0.05);
+}
+
+.step-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--border-color);
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+.step-card:hover .step-number {
+    color: var(--primary-green);
+}
+
+.step-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.step-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}

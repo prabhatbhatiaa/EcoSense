@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="light">
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
@@ -33,6 +34,7 @@
             </div>
         </div>
     </nav>
+
     <header id="hero">
         <div class="hero-container">
             <div class="hero-content reveal">
@@ -44,7 +46,6 @@
                     <a href="#overview" class="btn btn-secondary">Explore Features</a>
                 </div>
             </div>
-            
             <div class="hero-visual reveal">
                 <div class="mock-dashboard">
                     <div class="dash-header">
@@ -78,6 +79,74 @@
             </div>
         </div>
     </header>
+
+    <section id="overview" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Project Overview</h2>
+                <p>Intelligent conservation through real-time environmental analysis.</p>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-text reveal">
+                    <h3>Connecting agriculture with urban awareness.</h3>
+                    <p>The Soil Moisture Detecting System is a comprehensive IoT solution engineered to combat water wastage and monitor environmental health. By utilizing an Arduino UNO as the core processing unit, the system continuously reads data from integrated soil moisture and air quality sensors.</p>
+                    <p>When moisture drops below a critical threshold, the smart irrigation logic automatically engages, conserving water while ensuring optimal hydration. Simultaneously, real-time AQI monitoring provides crucial alerts for indoor and outdoor environments, displayed directly on an onboard LCD and web dashboard.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Why it matters:</strong> Traditional irrigation wastes up to 50% of water due to inefficiencies. Our automated logic cuts this waste to near zero by reacting strictly to data.</p>
+                    </div>
+                </div>
+                <div class="overview-features reveal">
+                    <div class="feature-item">
+                        <h4>Smart Irrigation Logic</h4>
+                        <p>Automated water pump activation based on real-time soil hydration metrics, preventing both over-watering and drought stress. The system learns the dry-out curve of the soil environment.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Environmental Telemetry</h4>
+                        <p>Continuous sampling of ambient air quality, providing an early warning system for high particulate and pollutant levels. Integrates MQ-135 readings for broad-spectrum gas detection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section alt-bg bg-pattern">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>How It Works</h2>
+                <p>A seamless pipeline from physical detection to automated action.</p>
+            </div>
+            <div class="steps-container reveal">
+                <div class="step-connector"></div>
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h4>Detection</h4>
+                    <p>Soil Moisture and AQI sensors continuously capture analog environmental data at 5-second intervals.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h4>Processing</h4>
+                    <p>Arduino UNO converts the raw voltage inputs, mapping them to actionable percentage thresholds.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h4>Optimization</h4>
+                    <p>Embedded algorithms determine precise water requirements based on historical dry-out rates.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h4>Automation</h4>
+                    <p>5V Relays trigger physical mechanical systems, activating the submersible pump exactly when needed.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">05</div>
+                    <h4>Display</h4>
+                    <p>Live metrics and hardware state alerts are pushed to the LCD interface and local digital dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
