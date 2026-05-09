@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         navItems.forEach(a => {
             a.classList.remove('active');
-            if (a.getAttribute('href').includes(current)) {
+            if (current && a.getAttribute('href').includes(current)) {
                 a.classList.add('active');
             }
         });
