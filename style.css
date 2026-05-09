@@ -13,7 +13,7 @@
     --card-shadow: 0 10px 30px rgba(0,0,0,0.05);
     --nav-bg: rgba(255, 255, 255, 0.85);
     --glow-opacity: 0.1;
-    --hero-bg: url('https://vlsci.com/wp-content/uploads/2023/07/shutterstock_243102907-scaled.jpg');
+    --hero-bg: url('images/backdrop.jpg');
 }
 
 [data-theme="dark"] {
@@ -31,7 +31,7 @@
     --card-shadow: 0 10px 30px rgba(0,0,0,0.3);
     --nav-bg: rgba(15, 17, 21, 0.85);
     --glow-opacity: 0.05;
-    --hero-bg: url('https://vlsci.com/wp-content/uploads/2023/07/shutterstock_243102907-scaled.jpg');
+    --hero-bg: url('images/backdrop.jpg');
 }
 
 * {
@@ -245,6 +245,23 @@ ul {
     position: relative;
     overflow: hidden;
     background-color: var(--bg-main);
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--hero-bg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.095;
+    z-index: 0;
+    pointer-events: none; 
+}
+.hero-overlay {
+    display: none;
 }
 
 .hero-container {
@@ -1109,10 +1126,6 @@ footer {
 }
 
 @media (max-width: 992px) {
-    #hero {
-        padding-top: 120px; 
-    }
-
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1125,14 +1138,9 @@ footer {
     .hero-cta {
         justify-content: center;
     }
-
-    .hero-visual {
-        justify-content: center;
-        margin-top: 2rem;
-    }
     
     .hero-overlay {
-        background: linear-gradient(to bottom, var(--bg-main) 30%, transparent 100%);
+        display: none;
     }
     
     .overview-grid, .impact-grid, .footer-container {
