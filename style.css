@@ -808,3 +808,131 @@ ul {
 .trend-down {
     color: var(--earth-brown);
 }
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.impact-content p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+.impact-list {
+    margin-top: 1.5rem;
+}
+
+.impact-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.impact-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+.impact-list strong {
+    color: var(--text-main);
+}
+
+.stats-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat-card {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    box-shadow: var(--card-shadow);
+}
+
+.stat-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    display: inline-block;
+}
+
+.stat-symbol {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.stat-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.split-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.split-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: var(--card-shadow);
+}
+
+.split-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    padding: 2rem 2rem 0;
+}
+
+.split-card h3 {
+    padding: 1rem 2rem 0;
+    font-size: 1.5rem;
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.card-intro {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.card-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-content li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.card-content strong {
+    color: var(--text-main);
+}
