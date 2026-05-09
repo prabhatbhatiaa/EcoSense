@@ -260,6 +260,7 @@ ul {
     z-index: 0;
     pointer-events: none; 
 }
+
 .hero-overlay {
     display: none;
 }
@@ -272,6 +273,7 @@ ul {
     gap: 4rem;
     align-items: center;
 }
+
 .badge {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -490,15 +492,9 @@ ul {
 }
 
 @keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
 
 .overview-grid {
@@ -1123,13 +1119,16 @@ footer {
 }
 
 @media (max-width: 992px) {
-    /* SCALES THE NEW WRAPPER DOWN FOR TABLETS */
     .container, .footer-container, .hero-container {
         padding: 0 2.5rem;
     }
     
     .nav-container {
         padding: 1rem 2.5rem;
+    }
+
+    .section {
+        padding: 6rem 0; 
     }
 
     .hero-container {
@@ -1146,12 +1145,12 @@ footer {
     }
     
     .hero-visual {
-        justify-content: center; /* Fixes left-pinning on tablets */
-        margin-top: 2rem;
+        justify-content: center; 
+        margin-top: 1rem;
     }
     
     .mock-dashboard {
-        max-width: 480px; /* Lets the dashboard breathe naturally */
+        max-width: 480px; 
     }
 
     .hero-overlay {
@@ -1173,46 +1172,63 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* SCALES THE NEW WRAPPER DOWN FOR PHONES */
     .container, .footer-container, .hero-container {
         padding: 0 1.5rem;
     }
     
-    /* Safely separate the horizontal and vertical padding for the navbar */
     .nav-container {
         padding: 1rem 1.5rem;
     }
 
     #hero {
-        padding-top: 120px; /* Clear the navbar */
+        min-height: auto; 
+        padding-top: 120px; 
+        padding-bottom: 3rem; 
+    }
+
+    .hero-container {
+        gap: 2rem;
     }
 
     .hero-content h1 {
-        font-size: 3.25rem; /* Punch up the mobile typography */
+        font-size: 3.25rem; 
         line-height: 1.1;
     }
 
     .nav-links {
-        position: fixed;
-        top: 60px;
-        left: -100%;
+        position: absolute; 
+        top: 100%;
+        left: 0;
         width: 100%;
-        height: calc(100vh - 60px);
-        background: var(--nav-bg);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        height: auto; 
+        padding: 2rem 0; 
+        gap: 1.5rem; 
+        background: var(--bg-alt);
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        transition: 0.4s ease;
+        justify-content: flex-start;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transform: translateY(-150%);
+        opacity: 0.5;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: -1; 
     }
     
     .nav-links.nav-active {
-        left: 0;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
     
     .mobile-toggle {
         display: flex;
+    }
+
+    /* TIGHTEN MOBILE SECTION PADDING TO FIX GAPS */
+    .section {
+        padding: 4rem 0; 
     }
     
     .steps-container {
