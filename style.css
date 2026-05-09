@@ -1,0 +1,70 @@
+:root {
+    --bg-main: #f8f9fa;
+    --bg-alt: #ffffff;
+    --text-main: #212529;
+    --text-muted: #6c757d;
+    --primary-green: #2d6a4f;
+    --primary-green-light: #40916c;
+    --accent-blue: #0077b6;
+    --accent-aqua: #00b4d8;
+    --earth-brown: #8b5a2b;
+    --border-color: #e9ecef;
+    --card-bg: #ffffff;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    --nav-bg: rgba(255, 255, 255, 0.85);
+    --glow-opacity: 0.1;
+    --hero-bg: url('https://vlsci.com/wp-content/uploads/2023/07/shutterstock_243102907-scaled.jpg');
+}
+
+[data-theme="dark"] {
+    --bg-main: #0f1115;
+    --bg-alt: #16181d;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --primary-green: #4ade80;
+    --primary-green-light: #22c55e;
+    --accent-blue: #38bdf8;
+    --accent-aqua: #0ea5e9;
+    --earth-brown: #d97706;
+    --border-color: #2d3748;
+    --card-bg: #1e222a;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    --nav-bg: rgba(15, 17, 21, 0.85);
+    --glow-opacity: 0.05;
+    --hero-bg: url('https://vlsci.com/wp-content/uploads/2023/07/shutterstock_243102907-scaled.jpg');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
