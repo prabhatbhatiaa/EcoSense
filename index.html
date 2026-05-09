@@ -281,7 +281,66 @@
             </div>
         </div>
     </section>
-    
+
+    <section id="hardware" class="section alt-bg bg-pattern">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Hardware Components</h2>
+                <p>The technical foundation of the sensing infrastructure.</p>
+            </div>
+            <div class="hardware-grid reveal">
+                <div class="hw-card">
+                    <h4>Arduino UNO</h4>
+                    <p>The central microcontroller executing processing logic, ADC conversion, and peripheral control.</p>
+                    <ul class="hw-specs">
+                        <li><span>Core:</span> ATmega328P</li>
+                        <li><span>Op Voltage:</span> 5V</li>
+                    </ul>
+                </div>
+                <div class="hw-card">
+                    <h4>Soil Moisture Sensor</h4>
+                    <p>Measures the volumetric water content in soil via electrical resistance mapping across conductive prongs.</p>
+                    <ul class="hw-specs">
+                        <li><span>Output:</span> Analog & Digital</li>
+                        <li><span>Current:</span> &lt; 20mA</li>
+                    </ul>
+                </div>
+                <div class="hw-card">
+                    <h4>MQ-135 Gas Sensor</h4>
+                    <p>Detects a wide range of gases including NH3, NOx, alcohol, benzene, smoke, and CO2.</p>
+                    <ul class="hw-specs">
+                        <li><span>Heater Voltage:</span> 5.0V</li>
+                        <li><span>Sensing Range:</span> 10-1000ppm</li>
+                    </ul>
+                </div>
+                <div class="hw-card">
+                    <h4>16x2 LCD Display</h4>
+                    <p>Provides localized, high-contrast visual output of critical system metrics and onboard alerts.</p>
+                    <ul class="hw-specs">
+                        <li><span>Interface:</span> I2C Protocol</li>
+                        <li><span>Backlight:</span> LED Yellow/Blue</li>
+                    </ul>
+                </div>
+                <div class="hw-card">
+                    <h4>5V Relay Module</h4>
+                    <p>Acts as an opto-isolated electronic switch to safely control the high-current water pump from the Arduino logic pins.</p>
+                    <ul class="hw-specs">
+                        <li><span>Max Load:</span> 10A / 250VAC</li>
+                        <li><span>Trigger:</span> Active Low</li>
+                    </ul>
+                </div>
+                <div class="hw-card">
+                    <h4>Submersible Pump</h4>
+                    <p>Executes the physical irrigation response, pulling from the reservoir driven by the automated moisture logic.</p>
+                    <ul class="hw-specs">
+                        <li><span>Voltage:</span> 3V - 6V DC</li>
+                        <li><span>Flow Rate:</span> 80-120 L/H</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
