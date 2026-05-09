@@ -86,10 +86,10 @@ ul {
     background: var(--text-muted);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.container, .nav-container, .footer-container {
+    max-width: 1440px; 
+    margin: 0 auto; 
+    padding: 0 2rem; 
 }
 
 .section {
@@ -250,15 +250,14 @@ ul {
 .hero-container {
     position: relative;
     z-index: 2;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 4rem;
     align-items: center;
 }
-
 .badge {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -272,8 +271,9 @@ ul {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: clamp(3.5rem, 5vw, 6rem);
     margin-bottom: 1.5rem;
+    line-height: 1.1;
 }
 
 .hero-content h1 span {
@@ -281,10 +281,10 @@ ul {
 }
 
 .hero-content p {
-    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 1.2vw, 1.5rem);
     color: var(--text-muted);
     margin-bottom: 2.5rem;
-    max-width: 500px;
+    max-width: 600px;
     line-height: 1.7;
 }
 
@@ -327,11 +327,11 @@ ul {
 }
 
 .hero-visual {
-    position: relative;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative; 
+    height: 100%; 
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
 }
 
 .mock-dashboard {
@@ -339,7 +339,7 @@ ul {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     width: 100%;
-    max-width: 400px;
+    max-width: clamp(420px, 35vw, 580px);
     box-shadow: var(--card-shadow);
     z-index: 2;
     overflow: hidden;
