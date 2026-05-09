@@ -662,27 +662,15 @@ ul {
 }
 
 @keyframes pulse-green {
-    0% {
-        box-shadow: 0 0 0 0 rgba(45, 106, 79, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(45, 106, 79, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(45, 106, 79, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(45, 106, 79, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(45, 106, 79, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(45, 106, 79, 0); }
 }
 
 @keyframes pulse-blue {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(0, 180, 216, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 180, 216, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 180, 216, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
 }
 
 .circular-progress {
@@ -806,4 +794,17 @@ ul {
 
 .status-ok {
     color: var(--text-main);
+}
+
+.sensor-trend {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.trend-up {
+    color: var(--primary-green);
+}
+
+.trend-down {
+    color: var(--earth-brown);
 }

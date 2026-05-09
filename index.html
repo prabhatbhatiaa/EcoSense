@@ -151,7 +151,7 @@
         <div class="container">
             <div class="section-header reveal">
                 <h2>Live System Status</h2>
-                <p>Real-time simulated telemetry from the hardware deployment.</p>
+                <p>Real-time telemetry payload parsed from local JSON endpoint.</p>
             </div>
             <div class="dashboard-ui reveal">
                 <div class="dash-grid">
@@ -159,39 +159,39 @@
                         <div class="dash-card-header">
                             <div>
                                 <h5>Soil Moisture</h5>
-                                <div class="sensor-trend trend-up" id="moisture-trend">Stable</div>
                             </div>
                             <span class="pulse-dot green"></span>
                         </div>
                         <div class="circular-progress">
                             <svg viewBox="0 0 36 36">
                                 <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path class="circle" id="moisture-circle" stroke-dasharray="45, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" id="moisture-circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                             </svg>
-                            <div class="circle-text" id="moisture-val">45%</div>
+                            <div class="circle-text" id="moisture-val">--%</div>
                         </div>
-                        <div class="status-text">Hydration Status: <span class="highlight">Optimal</span></div>
+                        <div class="sensor-trend" id="moisture-trend">Connecting...</div>
+                        <div class="status-text" style="margin-top: 10px;">Hydration Status: <span class="highlight">Tracking</span></div>
                     </div>
                     
                     <div class="dash-card">
                         <div class="dash-card-header">
                             <div>
                                 <h5>Air Quality (AQI)</h5>
-                                <div class="sensor-trend trend-down" id="aqi-trend">Fluctuating</div>
                             </div>
                             <span class="pulse-dot blue"></span>
                         </div>
-                        <div class="big-number" id="aqi-val">117</div>
+                        <div class="big-number" id="aqi-val">--</div>
+                        <div class="sensor-trend" id="aqi-trend" style="margin-bottom: 1.5rem;">Connecting...</div>
                         <div class="progress-bar-container">
-                            <div class="progress-bar" id="aqi-bar" style="width: 42%;"></div>
+                            <div class="progress-bar" id="aqi-bar" style="width: 0%;"></div>
                         </div>
-                        <div class="status-text">Particulate Status: <span class="highlight" id="aqi-status-text">Moderate</span></div>
+                        <div class="status-text">Particulate Status: <span class="highlight" id="aqi-status-text">Tracking</span></div>
                     </div>
 
                     <div class="dash-card system-stats">
                         <div class="stat-row">
                             <span>Water Pump</span>
-                            <span class="badge active" id="pump-status">STANDBY</span>
+                            <span class="badge active" id="pump-status">AWAITING DATA</span>
                         </div>
                         <div class="stat-row">
                             <span>Relay Circuit</span>
@@ -199,11 +199,11 @@
                         </div>
                         <div class="stat-row">
                             <span>Tank Level</span>
-                            <span id="tank-val">78%</span>
+                            <span id="tank-val">--%</span>
                         </div>
                         <div class="stat-row">
                             <span>Last Sync Ping</span>
-                            <span id="sync-time">Just now</span>
+                            <span id="sync-time">--:--:--</span>
                         </div>
                         <div class="stat-row">
                             <span>Environment Score</span>
